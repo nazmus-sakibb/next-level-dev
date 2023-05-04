@@ -1,7 +1,9 @@
 // normal function
-function add(num1: number, num2: number): number {
+// default parameter
+function add(num1: number, num2: number = 10): number {
   return num1 + num2;
 }
+add(30, 50)
 
 add(2, 5);
 
