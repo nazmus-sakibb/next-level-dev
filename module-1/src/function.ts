@@ -3,7 +3,16 @@
 function add(num1: number, num2: number = 10): number {
   return num1 + num2;
 }
-add(30, 50)
+add(30, 50);
+
+
+// spread operator
+const friends=['chandler', 'joe', 'ross']; 
+const newFriends = ['monica', 'racel', 'pheobe'];  
+
+friends.push(...newFriends);
+console.log(friends);
+
 
 add(2, 5);
 
