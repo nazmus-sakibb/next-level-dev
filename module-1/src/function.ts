@@ -10,6 +10,15 @@ add(30, 50);
 const friends=['chandler', 'joe', 'ross']; 
 const newFriends = ['monica', 'racel', 'pheobe'];  
 
+const myBestFriend = {
+  fullName: 'abul basar',
+  age: 24
+}
+
+const [bestFriend] = friends;
+const {fullName} = myBestFriend;
+console.log(fullName);
+
 friends.push(...newFriends);
 // console.log(friends);
 
@@ -44,3 +53,6 @@ const greetFriends = (...friends:string[])
 
 
 greetFriends('kashem', 'hasem', 'gasem', 'jobbar', 'rahim', 'karim', 'hero vai'); 
+
+
+// array and object destructuring 
