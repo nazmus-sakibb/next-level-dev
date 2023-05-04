@@ -11,7 +11,7 @@ const friends=['chandler', 'joe', 'ross'];
 const newFriends = ['monica', 'racel', 'pheobe'];  
 
 friends.push(...newFriends);
-console.log(friends);
+// console.log(friends);
 
 
 add(2, 5);
@@ -34,3 +34,13 @@ const person: {
     console.log(`My new balance is ${this.balance + money}`);
   },
 };
+
+
+
+// rest operator
+
+const greetFriends = (...friends:string[])
+: void =>  friends.forEach((friend) => console.log(`Hi ${friend}`))
+
+
+greetFriends('kashem', 'hasem', 'gasem', 'jobbar', 'rahim', 'karim', 'hero vai'); 
