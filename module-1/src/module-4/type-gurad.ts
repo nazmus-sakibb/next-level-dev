@@ -38,3 +38,67 @@ const adminUser1: AdminUserType = {name: 'Mr. Gallu', role: 'admin'};
 
 console.log(getUser(normalUser1));
 console.log(getUser(adminUser1));
+
+
+
+// instanceof type guard
+
+class Animal {
+    name: string;
+    species: string;
+    constructor(name: string, species: string){
+        this.name = name;
+        this.species = species;
+    }
+
+    makeSound(){
+        console.log('I am making sound');
+    }
+}
+
+
+class Dog extends Animal {
+    constructor(name: string, species: string){
+        super(name, species);
+    }
+    makeBark(){
+        console.log('I am barking');
+    }
+}
+
+class Cat extends Animal {
+    constructor(name: string, species: string){
+        super(name, species);
+    }
+    makeMeow(){
+        console.log('I am meowing');
+    }
+}
+
+
+function isDog(animal: Animal): animal is Dog{
+    return animal instanceof Dog;
+}
+
+function isCat(animal: Animal): animal is Cat{
+    return animal instanceof Cat;
+}
+
+function getAnimal(animal: Animal){
+    if(isDog(animal)){
+        animal.makeBark();
+    }
+    else if(isCat(animal)){
+        animal.makeMeow();
+    }
+    else{
+        animal.makeSound();
+    }
+}
+
+
+const animal1 = new Dog('German bahi', 'dog') //instance dog
+const animal2 = new Cat('Persian bhai', 'cat') //instance cat
+
+
+getAnimal(animal2)
