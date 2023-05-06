@@ -1,15 +1,15 @@
-interface Person {
+// interface Person {
 
-  firstName: string;
+//   firstName: string;
 
-  lastName: string;
+//   lastName: string;
 
-}
+// }
 
 
 
-function fullNameP<T extends Person>(person: T): string {
+// function fullNameP<T extends Person>(person: T): string {
 
-  return `${person.firstName} ${person.lastName}`;
+//   return `${person.firstName} ${person.lastName}`;
 
-}
+// }
