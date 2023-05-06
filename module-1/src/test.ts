@@ -1,17 +1,15 @@
-function generateAdder(a: number): (b: number) => number {
+interface Person {
 
-    return function(b: number) {
-  
-      return a + b;
-  
-    };
-  
-  }
-  
-  
-  
-  const addTwo = generateAdder(2);
-  
-  console.log(addTwo(3));
-  
-  console.log(addTwo(5));
+  firstName: string;
+
+  lastName: string;
+
+}
+
+
+
+function fullNameP<T extends Person>(person: T): string {
+
+  return `${person.firstName} ${person.lastName}`;
+
+}
