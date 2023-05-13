@@ -17,8 +17,8 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
     // inserting a test data into mongodb
 
     /**
-     * 1. Interface
-     * 2. Schema
+     * 1. Interface    -- done
+     * 2. Schema    -- done
      * 3. Model
      * 4. Database query
      */
