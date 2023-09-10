@@ -11,6 +11,10 @@ const counterSlice = createSlice({
     increment: (state) => {
       state.count += 1;
     },
-    decrement: () => {},
+    decrement: (state) => {
+        state.count -= 1;
+    },
   },
 });
+
+export default counterSlice.reducer;
