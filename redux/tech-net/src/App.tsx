@@ -1,6 +1,9 @@
-import { decrement, increment, incrementByAmount } from "./redux/features/counter/CounterSlice";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from "./redux/features/counter/CounterSlice";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
-import { RootState } from "./redux/store";
 
 function App() {
   const { count } = useAppSelector((state) => state.counter);
