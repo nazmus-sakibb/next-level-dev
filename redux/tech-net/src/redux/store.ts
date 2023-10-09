@@ -8,6 +8,7 @@ const store = configureStore({
     counter: counterReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
   // devTools: true,
 });
 
