@@ -31,10 +31,12 @@ const cartSlice = createSlice({
         (product) => product._id === action.payload._id
       );
 
-      if (existing) {
+      if (existing && existing.quantity! > 1) {
         existing.quantity = existing.quantity! - 1;
       } else {
-        state.products.push({ ...action.payload, quantity: 1 });
+        state.products = state.products.filter(
+          (product) => product._id !== action.payload._id
+        );
       }
     },
 
@@ -46,6 +48,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addToCart,removeOne, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeOne, removeFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
