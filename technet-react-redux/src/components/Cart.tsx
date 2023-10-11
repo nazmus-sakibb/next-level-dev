@@ -1,4 +1,4 @@
-import { useAppSelector } from '@/redux/hook';
+import { useAppDispatch, useAppSelector } from '@/redux/hook';
 import {
   HiMinus,
   HiOutlinePlus,
@@ -13,9 +13,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './ui/sheet';
+import { addToCart } from '@/redux/features/cart/cartSlice';
 
 export default function Cart() {
   const { products } = useAppSelector((state) => state.cart);
+
+  const dispatch = useAppDispatch();
 
   //! Dummy data
 
@@ -53,7 +56,7 @@ export default function Cart() {
                 </p>
               </div>
               <div className="border-l pl-5 flex flex-col justify-between">
-                <Button>
+                <Button onClick={() => dispatch(addToCart(product))}>
                   <HiOutlinePlus size="20" />
                 </Button>
                 <Button>
